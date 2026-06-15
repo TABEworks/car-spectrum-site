@@ -25,22 +25,38 @@
 <body>
 <div class="wrap">
   <h1>Car Spectrum プライバシーポリシー</h1>
-  <p class="meta">最終更新日: 2026年6月11日</p>
+  <p class="meta">最終更新日: 2026年6月15日</p>
 
   <h2>収集する情報</h2>
-  <p>Car Spectrum（以下「本アプリ」）は、利用者の個人情報を一切収集しません。氏名・メールアドレス・位置情報・端末識別子・利用状況の解析データなどを取得・送信・保存することはありません。</p>
+  <p>Car Spectrum（以下「本アプリ」）は、利用者の個人情報を収集しません。氏名・メールアドレス・位置情報・端末識別子・利用状況の解析データなどを取得・保存することはありません。本アプリには広告・解析（アナリティクス）・トラッキングのための第三者SDKは含まれていません。</p>
+  <p>ただし「曲名認識」機能を有効にしている場合に限り、後述のとおり音声から生成した特徴データ（シグネチャ）が照合のため Apple のサービスへ送信されます。</p>
 
   <h2>マイクの利用について</h2>
   <p>本アプリは、車内のスピーカーから流れる音を解析してスペクトラム（周波数分布）を画面に表示するためにマイクを使用します。取得した音声は次のように扱われます。</p>
   <ul>
-    <li>音声は<strong>端末内でのみ</strong>リアルタイムに周波数解析（FFT）され、画面表示に使われます。</li>
-    <li>音声を<strong>録音・ファイル保存することはありません</strong>。</li>
-    <li>音声やその解析結果を<strong>外部サーバーや第三者へ送信することはありません</strong>。</li>
-    <li>解析はすべてその場で処理され、画面に表示された後は保持されません。</li>
+    <li>音声は<strong>端末内でリアルタイムに周波数解析（FFT）</strong>され、画面表示に使われます。</li>
+    <li>マイクで取得した音声を<strong>録音・ファイル保存することはありません</strong>。</li>
+    <li>スペクトラム表示のための解析はすべて端末内で完結し、画面に表示された後は保持されません。音声そのものを外部へ送信することはありません。</li>
+  </ul>
+
+  <h2>曲名認識について（ShazamKit）</h2>
+  <p>本アプリには、いま流れている曲名を表示する「曲名認識」機能があります。Apple Music／ミュージック以外の音源（ストリーミング・ラジオ・CD 等）では、Apple の ShazamKit を利用してマイク音声から曲を識別します。</p>
+  <ul>
+    <li>識別の際、マイク音声そのものではなく、<strong>音声から端末内で生成した特徴データ（音響シグネチャ）</strong>が、照合のため <strong>Apple が運営する Shazam サービスへ送信</strong>されます。送信されたデータの取り扱いは <a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a> に従います。</li>
+    <li>送信されるのはシグネチャのみで、<strong>録音した音声ファイルや会話の内容が送られることはありません</strong>。識別結果（曲名・アーティスト名・アートワーク）は画面表示にのみ使われ、端末内に履歴として保存されることはありません。</li>
+    <li>曲名認識は<strong>メニューのトグルでオフにできます</strong>。オフにすると自動でのシグネチャ送信は行われません（この場合でも画面のダブルタップによる手動の単発実行は、明示的な操作として動作します）。</li>
+  </ul>
+
+  <h2>再生中の曲情報の読み取りについて（Apple Music／ミュージック）</h2>
+  <p>Apple Music または端末のミュージックライブラリで再生している場合は、より正確な表示のため、OS が保持する再生中の曲情報（曲名・アーティスト名・アートワーク）を読み取ります。</p>
+  <ul>
+    <li>これは端末内のメディアライブラリ情報を<strong>読み取るだけ</strong>で、音声やデータを外部へ送信することはありません（この経路では ShazamKit を使用しません）。</li>
+    <li>本アプリが再生を操作することはありません（再生・停止・スキップ等は行いません）。</li>
+    <li>この機能には<strong>メディアライブラリへのアクセス許可</strong>が必要です。許可しない場合でも本アプリは利用でき、曲名表示は ShazamKit 経路のみで動作します。</li>
   </ul>
 
   <h2>第三者への提供・外部送信</h2>
-  <p>本アプリはネットワーク経由でのデータ送信を行いません。広告・解析（アナリティクス）・トラッキングのための第三者SDKも使用していません。</p>
+  <p>本アプリは、上記「曲名認識（ShazamKit）」で説明した Apple の Shazam サービスへのシグネチャ送信を除き、利用者のデータを外部へ送信しません。広告・解析・トラッキングのための第三者SDKは使用しておらず、利用者を追跡することはありません。</p>
 
   <h2>アプリ内課金</h2>
   <p>スキンパックの購入は Apple の App Store / StoreKit を通じて処理されます。購入処理および決済情報の取り扱いは Apple のプライバシーポリシーに従います。本アプリが利用者の決済情報を受け取ることはありません。</p>
@@ -58,22 +74,38 @@
 
   <p class="lang">English</p>
   <h1>Car Spectrum Privacy Policy</h1>
-  <p class="meta">Last updated: June 11, 2026</p>
+  <p class="meta">Last updated: June 15, 2026</p>
 
   <h2>Information We Collect</h2>
-  <p>Car Spectrum (the "App") does not collect any personal information. We do not gather, transmit, or store your name, email address, location, device identifiers, or usage analytics.</p>
+  <p>Car Spectrum (the "App") does not collect personal information. We do not gather or store your name, email address, location, device identifiers, or usage analytics. The App contains no third-party advertising, analytics, or tracking SDKs.</p>
+  <p>The only exception is the optional "song recognition" feature: when enabled, feature data (a signature) derived from audio is sent to Apple's service for matching, as described below.</p>
 
   <h2>Use of the Microphone</h2>
-  <p>The App uses the microphone solely to analyze sound from your car's speakers and display a real-time frequency spectrum. The captured audio is handled as follows:</p>
+  <p>The App uses the microphone to analyze sound from your car's speakers and display a real-time frequency spectrum. The captured audio is handled as follows:</p>
   <ul>
-    <li>Audio is analyzed (FFT) <strong>entirely on your device</strong> in real time for on-screen display.</li>
-    <li>Audio is <strong>never recorded or saved to a file</strong>.</li>
-    <li>Audio and its analysis results are <strong>never transmitted to any server or third party</strong>.</li>
-    <li>All processing is ephemeral; nothing is retained after it is displayed.</li>
+    <li>Audio is analyzed (FFT) <strong>on your device</strong> in real time for on-screen display.</li>
+    <li>The microphone audio is <strong>never recorded or saved to a file</strong>.</li>
+    <li>Spectrum analysis is performed entirely on-device and nothing is retained after it is displayed. The audio itself is never transmitted off the device.</li>
+  </ul>
+
+  <h2>Song Recognition (ShazamKit)</h2>
+  <p>The App can display the title of the song currently playing. For sources other than Apple Music / the Music app (streaming, radio, CD, etc.), it identifies songs from microphone audio using Apple's ShazamKit.</p>
+  <ul>
+    <li>For matching, the App does not send the raw microphone audio. Instead, <strong>feature data (an acoustic signature) generated on your device</strong> is sent to the <strong>Shazam service operated by Apple</strong>. Data sent there is handled under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+    <li>Only the signature is transmitted; <strong>no recorded audio file or conversation content is sent</strong>. Recognition results (title, artist, artwork) are used only for on-screen display and are not stored as history on your device.</li>
+    <li>Song recognition <strong>can be turned off</strong> in the menu. When off, no automatic signature transmission occurs (a manual one-shot lookup via double-tapping the screen still works, as an explicit action).</li>
+  </ul>
+
+  <h2>Reading Now-Playing Info (Apple Music / Music)</h2>
+  <p>When you play music via Apple Music or your device's Music library, the App reads the now-playing information held by the OS (title, artist, artwork) for more accurate display.</p>
+  <ul>
+    <li>This <strong>only reads</strong> on-device media library information; no audio or data is transmitted externally (ShazamKit is not used on this path).</li>
+    <li>The App never controls playback (it does not play, pause, or skip).</li>
+    <li>This feature requires <strong>media library access permission</strong>. If you decline, the App still works and song display operates via the ShazamKit path only.</li>
   </ul>
 
   <h2>Third Parties &amp; Data Transmission</h2>
-  <p>The App does not transmit any data over the network. It contains no third-party advertising, analytics, or tracking SDKs.</p>
+  <p>Aside from the signature sent to Apple's Shazam service described under "Song Recognition (ShazamKit)" above, the App does not transmit your data externally. It contains no third-party advertising, analytics, or tracking SDKs, and does not track you.</p>
 
   <h2>In-App Purchases</h2>
   <p>Skin pack purchases are processed by Apple via the App Store / StoreKit. Payment handling is governed by Apple's privacy policy. The App never receives your payment information.</p>
